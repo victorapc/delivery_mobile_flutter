@@ -1,4 +1,5 @@
 import 'package:delivery_mobile_flutter/app/core/ui/delivery_ui.dart';
+import 'package:delivery_mobile_flutter/app/routes/auth_routers.dart';
 import 'package:delivery_mobile_flutter/app/routes/splash_routers.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -16,7 +17,8 @@ class DeliveryMobileFlutterApp extends StatelessWidget {
       title: 'Delivery App',
       theme: DeliveryUI.theme,
       getPages: [
-        ...SplashRouters.routers
+        ...SplashRouters.routers,
+        ...AuthRouters.routers,
       ],
     );
   }
