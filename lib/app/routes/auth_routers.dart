@@ -1,3 +1,4 @@
+import 'package:delivery_mobile_flutter/app/core/constants/constants.dart';
 import 'package:delivery_mobile_flutter/app/modules/auth/login/login_bindings.dart';
 import 'package:delivery_mobile_flutter/app/modules/auth/login/login_page.dart';
 import 'package:delivery_mobile_flutter/app/modules/auth/register/register_bindings.dart';
@@ -9,12 +10,12 @@ class AuthRouters {
 
   static final routers = <GetPage>[
     GetPage(
-      name: '/auth/login',
+      name: Constants.ROTA_LOGIN,
       binding: LoginBindings(),
       page: () => const LoginPage(),
     ),
     GetPage(
-      name: '/auth/register',
+      name: Constants.ROTA_REGISTER,
       binding: RegisterBindings(),
       page: () => const RegisterPage(),
     )

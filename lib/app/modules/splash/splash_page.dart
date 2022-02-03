@@ -1,8 +1,9 @@
 import 'package:delivery_mobile_flutter/app/core/ui/widget/delivery_button.dart';
+import 'package:delivery_mobile_flutter/app/modules/splash/splash_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class SplashPage extends StatelessWidget {
+class SplashPage extends GetView<SplashController> {
   const SplashPage({Key? key}) : super(key: key);
 
   @override
@@ -37,9 +38,7 @@ class SplashPage extends StatelessWidget {
                     label: 'ACESSAR',
                     width: context.widthTransformer(reducedBy: 40),
                     height: 35,
-                    onPressed: () {
-                      Get.toNamed('/auth/login');
-                    },
+                    onPressed: () => controller.checkLogged(),
                   ),
                 ],
               ),

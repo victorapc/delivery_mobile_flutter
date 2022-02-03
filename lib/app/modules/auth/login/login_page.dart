@@ -1,3 +1,4 @@
+import 'package:delivery_mobile_flutter/app/core/constants/constants.dart';
 import 'package:delivery_mobile_flutter/app/core/ui/delivery_state.dart';
 import 'package:delivery_mobile_flutter/app/core/ui/delivery_ui.dart';
 import 'package:delivery_mobile_flutter/app/core/ui/widget/delivery_appbar.dart';
@@ -105,7 +106,7 @@ class _LoginPageState extends DeliveryState<LoginPage, LoginController> {
                             const Text('Não possui uma conta?'),
                             TextButton(
                               onPressed: () {
-                                Get.toNamed('/auth/register');
+                                Get.toNamed(Constants.ROTA_REGISTER);
                               },
                               child: const Text(
                                 'Cadastra-se',

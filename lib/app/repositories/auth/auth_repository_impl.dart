@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:delivery_mobile_flutter/app/core/constants/constants.dart';
 import 'package:delivery_mobile_flutter/app/core/exceptions/user_notfound_exception.dart';
 import 'package:delivery_mobile_flutter/app/core/rest_client/rest_client.dart';
 import 'package:delivery_mobile_flutter/app/models/user_model.dart';
@@ -14,7 +15,7 @@ class AuthRepositoryImpl implements AuthRepository {
 
   @override
   Future<UserModel> register(String name, String email, String password) async {
-    final result = await _restClient.post('/auth/register', {
+    final result = await _restClient.post(Constants.ROTA_REGISTER, {
       'name': name,
       'email': email,
       'password': password,
