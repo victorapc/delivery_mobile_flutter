@@ -1,7 +1,9 @@
+import 'package:delivery_mobile_flutter/app/core/constants/constants.dart';
 import 'package:delivery_mobile_flutter/app/core/ui/delivery_ui.dart';
 import 'package:delivery_mobile_flutter/app/core/ui/formatter_helper.dart';
 import 'package:delivery_mobile_flutter/app/models/product_model.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ProductTile extends StatelessWidget {
   final ProductModel product;
@@ -11,7 +13,9 @@ class ProductTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Get.toNamed(Constants.ROTA_PRODUCT_DETAIL, arguments: product);
+      },
       child: Container(
         margin: const EdgeInsets.all(10),
         height: 80,

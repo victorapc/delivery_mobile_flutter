@@ -1,5 +1,6 @@
 import 'package:delivery_mobile_flutter/app/core/constants/constants.dart';
 import 'package:delivery_mobile_flutter/app/core/ui/widget/delivery_appbar.dart';
+import 'package:delivery_mobile_flutter/app/core/ui/widget/icon_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:delivery_mobile_flutter/app/modules/home/home_controller.dart';
@@ -15,16 +16,19 @@ class HomePage extends GetView<HomeController> {
         return BottomNavigationBar(
           onTap: (value) => controller.tabIndex = value,
           currentIndex: controller.tabIndex,
-          items: const [
-            BottomNavigationBarItem(
+          items: [
+            const BottomNavigationBarItem(
               icon: Icon(Icons.list),
               label: 'Lista',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart),
+              icon: IconBadge(
+                number: controller.totalProductsInShoppingCard,
+                icon: Icons.shopping_cart,
+              ),
               label: 'Carrinho',
             ),
-            BottomNavigationBarItem(
+            const  BottomNavigationBarItem(
               icon: Icon(Icons.exit_to_app),
               label: 'Sair',
             )
