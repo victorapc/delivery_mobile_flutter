@@ -9,6 +9,7 @@ class Constants {
   static const ROTA_HOME = '/home';
   static const ROTA_PRODUCTS = '/products/';
   static const ROTA_PRODUCT_DETAIL = '/product_detail';
+  static const ROTA_ORDERS_FINISHED = '/orders/finished';
   //Rotas menu.
   static const ROTA_MENU = '/menu';
   static const ROTA_SHOPPING_CARD = '/order/shopping_card';

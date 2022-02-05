@@ -3,6 +3,8 @@ import 'package:delivery_mobile_flutter/app/core/services/auth_service.dart';
 import 'package:delivery_mobile_flutter/app/core/services/shopping_card_service.dart';
 import 'package:delivery_mobile_flutter/app/modules/menu/menu_bindings.dart';
 import 'package:delivery_mobile_flutter/app/modules/menu/menu_page.dart';
+import 'package:delivery_mobile_flutter/app/modules/order/shopping_card_module/shopping_card_bindings.dart';
+import 'package:delivery_mobile_flutter/app/modules/order/shopping_card_module/shopping_card_page.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -45,6 +47,13 @@ class HomeController extends GetxController {
       );
     }
 
-    if (settings.name == Constants.ROTA_SHOPPING_CARD) {}
+    if (settings.name == Constants.ROTA_SHOPPING_CARD) {
+      return GetPageRoute(
+        settings: settings,
+        page: () => const ShoppingCardPage(),
+        binding: ShoppingCardBinding(),
+        transition: Transition.fadeIn,
+      );
+    }
   }
 }

@@ -2,6 +2,7 @@ import 'package:delivery_mobile_flutter/app/core/bindings/application_binding.da
 import 'package:delivery_mobile_flutter/app/core/ui/delivery_ui.dart';
 import 'package:delivery_mobile_flutter/app/routes/auth_routers.dart';
 import 'package:delivery_mobile_flutter/app/routes/home_routers.dart';
+import 'package:delivery_mobile_flutter/app/routes/orders_routers.dart';
 import 'package:delivery_mobile_flutter/app/routes/product_routers.dart';
 import 'package:delivery_mobile_flutter/app/routes/splash_routers.dart';
 import 'package:flutter/material.dart';
@@ -27,6 +28,7 @@ class DeliveryMobileFlutterApp extends StatelessWidget {
         ...AuthRouters.routers,
         ...HomeRouters.routers,
         ...ProductRouters.routers,
+        ...OrdersRouters.routers,
       ],
     );
   }
