@@ -1,9 +1,12 @@
 import 'package:delivery_mobile_flutter/app/core/ui/widget/delivery_button.dart';
+import 'package:delivery_mobile_flutter/app/models/order_pix.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class FinishedPage extends StatelessWidget {
-  const FinishedPage({Key? key}) : super(key: key);
+  final OrderPix _orderPix = Get.arguments;
+
+  FinishedPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

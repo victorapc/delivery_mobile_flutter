@@ -50,7 +50,7 @@ class HomeController extends GetxController {
     if (settings.name == Constants.ROTA_SHOPPING_CARD) {
       return GetPageRoute(
         settings: settings,
-        page: () => const ShoppingCardPage(),
+        page: () => ShoppingCardPage(),
         binding: ShoppingCardBinding(),
         transition: Transition.fadeIn,
       );

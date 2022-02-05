@@ -8,7 +8,9 @@ import 'package:get/get.dart';
 import 'package:validatorless/validatorless.dart';
 
 class ShoppingCardPage extends GetView<ShoppingCardController> {
-  const ShoppingCardPage({Key? key}) : super(key: key);
+  final formKey = GlobalKey<FormState>();
+
+  ShoppingCardPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +25,7 @@ class ShoppingCardPage extends GetView<ShoppingCardController> {
               ),
               child: IntrinsicHeight(
                 child: Form(
+                  key: formKey,
                   child: Visibility(
                     visible: controller.products.isNotEmpty,
                     replacement: Column(
@@ -125,7 +128,10 @@ class ShoppingCardPage extends GetView<ShoppingCardController> {
                             child: DeliveryButton(
                               label: 'FINALIZAR',
                               onPressed: () {
-                                Get.toNamed(Constants.ROTA_ORDERS_FINISHED);
+                                final formValid = formKey.currentState?.validate() ?? false;
+                                if (formValid) {
+                                  controller.createOrder();
+                                }
                               },
                             ),
                           ),
