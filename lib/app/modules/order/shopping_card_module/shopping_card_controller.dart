@@ -56,6 +56,7 @@ class ShoppingCardController extends GetxController {
 
     var orderPix = await _orderRepository.createOrder(order);
     orderPix = orderPix.copyWith(totalValue: totalValue);
+    clear();
     Get.offNamed(Constants.ROTA_ORDERS_FINISHED, arguments: orderPix);
     Get.back(id: HomeController.NAVIGATOR_KEY);
   }

@@ -13,7 +13,7 @@ class OrdersRouters {
     ),
     GetPage(
       name: Constants.ROTA_ORDERS_PIX,
-      page: () => const PixPage(),
+      page: () => PixPage(),
     )
   ];
 }

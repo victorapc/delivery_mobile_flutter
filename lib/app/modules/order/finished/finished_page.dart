@@ -1,3 +1,4 @@
+import 'package:delivery_mobile_flutter/app/core/constants/constants.dart';
 import 'package:delivery_mobile_flutter/app/core/ui/widget/delivery_button.dart';
 import 'package:delivery_mobile_flutter/app/models/order_pix.dart';
 import 'package:flutter/material.dart';
@@ -45,7 +46,9 @@ class FinishedPage extends StatelessWidget {
                   width: context.widthTransformer(reducedBy: 30),
                   child: DeliveryButton(
                     label: 'Pix',
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.toNamed(Constants.ROTA_ORDERS_PIX, arguments: _orderPix);
+                    },
                     color: context.theme.primaryColorDark,
                   ),
                 ),
@@ -55,7 +58,9 @@ class FinishedPage extends StatelessWidget {
                   width: context.widthTransformer(reducedBy: 10),
                   child: DeliveryButton(
                     label: 'FECHAR',
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.offAllNamed(Constants.ROTA_HOME);
+                    },
                   ),
                 ),
               ],
